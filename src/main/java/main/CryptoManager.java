@@ -16,6 +16,10 @@ public class CryptoManager {
     private static List<CryptoPlayer> CRYPTO_PLAYERS = new ArrayList<>();
     private static HashMap<String, Double> CRYPTO_COINS_VALUE = new HashMap<>();
 
+    public static boolean coinExists(String coin){
+        return CRYPTO_COINS_VALUE.containsKey(coin);
+    }
+
     public static double getCoinValue(String coin){
         return CRYPTO_COINS_VALUE.get(coin);
     }

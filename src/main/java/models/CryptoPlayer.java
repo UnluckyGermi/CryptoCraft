@@ -52,6 +52,27 @@ public class CryptoPlayer {
         return new ArrayList<>(cryptoCoinQuantityMap.keySet());
     }
 
+    public double removeCoin(String coin, double quantity){
+        Double currentQuantityObj = cryptoCoinQuantityMap.get(coin);
+        double currentQuantity = 0;
+        if(currentQuantityObj != null) currentQuantity = currentQuantityObj;
+        double newQuantity = currentQuantity - quantity;
+        if(newQuantity <= 0) {
+            cryptoCoinQuantityMap.remove(coin);
+            return currentQuantity;
+        }
+        cryptoCoinQuantityMap.put(coin, newQuantity);
+
+        return currentQuantity - newQuantity;
+    }
+
+    public void addCoin(String coin, double quantity){
+        Double currentQuantityObj = cryptoCoinQuantityMap.get(coin);
+        double currentQuantity = 0;
+        if(currentQuantityObj != null) currentQuantity = currentQuantityObj;
+        cryptoCoinQuantityMap.put(coin, currentQuantity + quantity);
+    }
+
     public double getAllCoinsTotalValue(){
         double total = 0;
 

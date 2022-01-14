@@ -8,3 +8,9 @@ commands:
   bal:
     description: See your current balance.
     usage: /bal
+  cbal:
+    description: See your Crypto Coins and values.
+    usage: /cbal
+  crypto:
+    description: Admin command - Manage the CryptoCraft economy!
+    usage: /crypto <Command>
