@@ -3,8 +3,6 @@ package utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import main.CryptoManager;
-import main.Main;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
@@ -35,7 +33,6 @@ public class ApiConsumer {
                 String name = jsonObject.get("currency").getAsString();
                 double value = jsonObject.get("price").getAsDouble();
                 coinData.put(name, value);
-                Main.plugin.getLogger().info(name);
             }
 
             return coinData;

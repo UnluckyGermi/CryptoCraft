@@ -1,7 +1,6 @@
 package models;
 
 import main.CryptoManager;
-import org.bukkit.OfflinePlayer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
