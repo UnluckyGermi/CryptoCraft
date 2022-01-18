@@ -20,17 +20,16 @@ public class CryptoCommandCompleter implements TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
-        if(label.equalsIgnoreCase("crypto")){
+        if(label.equalsIgnoreCase("crypto")) {
 
-            if(args.length == 1) return Arrays.stream(subCommands).toList();
+            if (args.length == 1) return Arrays.stream(subCommands).toList();
 
-            if(args.length == 3){
-                if(args[0].equalsIgnoreCase("addcoin")){
+            if (args.length == 3) {
+                if (args[0].equalsIgnoreCase("addcoin")) {
                     return Utils.filterCoin(args[2]);
-                }
-                else if(args[0].equalsIgnoreCase("removecoin")){
+                } else if (args[0].equalsIgnoreCase("removecoin")) {
                     UUID uuid = UserManager.playerUuidByName.get(args[1]);
-                    if(uuid == null) return null;
+                    if (uuid == null) return null;
 
 
                     CryptoPlayer cryptoPlayer = CryptoManager.getCryptoPlayer(uuid);

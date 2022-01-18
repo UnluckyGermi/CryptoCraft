@@ -11,6 +11,12 @@ commands:
   cbal:
     description: See your Crypto Coins and values.
     usage: /cbal
+  pay:
+    description: Send money to another player.
+    usage: /pay <Player> <Quantity>
+  cpay:
+    description: Send money to another player by crypto coins.
+    usage: /cpay <Player> <Coin> <Quantity ($)>
   crypto:
     description: Admin command - Manage the CryptoCraft economy!
     usage: /crypto <Command>
